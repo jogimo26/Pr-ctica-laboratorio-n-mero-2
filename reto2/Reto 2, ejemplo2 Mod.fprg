@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto 2, ejemplo2 Mod"/>
+        <attribute name="authors" value="fabia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 09:28:44 p. m."/>
+        <attribute name="created" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDk6MTI6MzYgcC4gbS47Mjg2MA=="/>
+        <attribute name="edited" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDk6Mjg6NDQgcC4gbS47MTsyOTc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <declare name="limite" type="Integer" array="False" size=""/>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="1"/>
+            <assign variable="i" expression="1"/>
+            <output expression="&quot;Ingrese un n&#250;mero: &quot;" newline="True"/>
+            <input variable="numero"/>
+            <output expression="&quot;Ingrese el l&#237;mite de los n&#250;meros impares siguientes a ver: &quot;" newline="True"/>
+            <input variable="limite"/>
+            <output expression="&quot;Los n&#250;meros impares siguientes son: &quot;" newline="True"/>
+            <for variable="i" start="numero" end="limite" direction="inc" step="1">
+                <if expression="i%2==1">
+                    <then>
+                        <output expression="&quot; &quot; &amp;i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="contador" expression="contador+1"/>
+            </for>
+            <output expression="&quot;Hemos culminado!... Hasta pronto!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
