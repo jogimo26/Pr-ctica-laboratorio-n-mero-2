@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto3"/>
+        <attribute name="authors" value="fabia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 10:31:15 p. m."/>
+        <attribute name="created" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MTA6MDQ6MzAgcC4gbS47Mjg0Nw=="/>
+        <attribute name="edited" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MTA6MzE6MTUgcC4gbS47MTsyOTU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="datos" type="Integer" array="False" size=""/>
+            <declare name="acum" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <declare name="prom" type="Integer" array="False" size=""/>
+            <declare name="maxNum" type="Integer" array="False" size=""/>
+            <declare name="minNum" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="datos" expression="0"/>
+            <assign variable="acum" expression="0"/>
+            <assign variable="c" expression="1"/>
+            <assign variable="prom" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <assign variable="minNum" expression="92233720368547"/>
+            <assign variable="maxNum" expression="-92233720368547"/>
+            <declare name="tiempo" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese segundos para el intervalo de tiempo en la recoleccion de datos: &quot;" newline="True"/>
+            <input variable="tiempo"/>
+            <output expression="&quot;Ingrese el n&#250;mero de datos: &quot;" newline="True"/>
+            <input variable="n"/>
+            <while expression="(c &lt;= n)">
+                <output expression="&quot;Ingrese dato #&quot; &amp;c" newline="True"/>
+                <input variable="datos"/>
+                <assign variable="c" expression="c+1"/>
+                <assign variable="acum" expression="acum+datos"/>
+                <assign variable="prom" expression="acum/n"/>
+                <if expression="datos &lt; minNum">
+                    <then>
+                        <assign variable="minNum" expression="datos"/>
+                    </then>
+                    <else>
+                        <assign variable="maxNum" expression="datos"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;su promedio es: &quot; &amp;prom" newline="True"/>
+            <output expression="&quot;La humedad maxima registrada es: &quot; &amp;maxNum" newline="True"/>
+            <output expression="&quot;La humedad minima registrada es : &quot; &amp;minNum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
