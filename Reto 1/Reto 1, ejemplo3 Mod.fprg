@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto 1, ejemplo3 Mod"/>
+        <attribute name="authors" value="fabia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 09:09:35 p.&#160;m."/>
+        <attribute name="created" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDg6Mzg6MjcgcC4gbS47Mjg2Nw=="/>
+        <attribute name="edited" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDk6MDY6MzkgcC4gbS47MTsyOTc0"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLUROTU4yTEk7MjAyNC0xMC0xNjswOTowOTozNSBwLsKgbS47MTszNTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="inicio" type="Integer" array="False" size=""/>
+            <declare name="fin" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <output expression="&quot;Proporcione el inicio del rango para el cual se van a ver los n&#250;meros pares: &quot;" newline="True"/>
+            <input variable="inicio"/>
+            <output expression="&quot;Proporcione el final del rango para el cual se van a ver los n&#250;meros pares: &quot;" newline="True"/>
+            <input variable="fin"/>
+            <output expression="&quot;Los n&#250;meros pares en el rango indicado son: &quot;" newline="True"/>
+            <if expression="inicio%2==0">
+                <then>
+                    <output expression="&quot;Los n&#250;meros pares son: &quot;" newline="False"/>
+                    <for variable="i" start="inicio" end="fin" direction="inc" step="2">
+                        <output expression="&quot; &quot; &amp;i" newline="False"/>
+                    </for>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot;Hasta aqu&#237;!!!&quot;" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>

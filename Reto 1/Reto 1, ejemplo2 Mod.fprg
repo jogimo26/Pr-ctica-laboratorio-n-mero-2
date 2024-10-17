@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto 1, ejemplo2 Mod"/>
+        <attribute name="authors" value="fabia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 08:30:27 p. m."/>
+        <attribute name="created" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDg6MTg6MDMgcC4gbS47Mjg1OQ=="/>
+        <attribute name="edited" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDg6MzA6MjcgcC4gbS47MTsyOTY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <declare name="inicio" type="Integer" array="False" size=""/>
+            <assign variable="contador" expression="1"/>
+            <output expression="&quot;Ingrese el n&#250;mero desde donde desea ver los ID de inventario: &quot;" newline="True"/>
+            <input variable="inicio"/>
+            <for variable="contador" start="inicio" end="inicio+10" direction="inc" step="1">
+                <output expression="&quot;El ID de inventario es: &quot;&amp;contador" newline="True"/>
+                <assign variable="contador" expression="contador+1"/>
+            </for>
+            <output expression="&quot;Hemos culminado!... Hasta pronto!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
