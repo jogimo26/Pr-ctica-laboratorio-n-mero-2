@@ -25,7 +25,7 @@ while (c <= n):
     acum += datos 
     prom = acum / n
 
-    # No sabemos que pasa acá, solo se sabe que funciona contra toda lógica (El proceso de validación de los números más chiquitos y grandes de los datos)
+    # El proceso de validación de los números más chiquitos y grandes de los datos
     if datos < max_num:
         max_num = datos
 
