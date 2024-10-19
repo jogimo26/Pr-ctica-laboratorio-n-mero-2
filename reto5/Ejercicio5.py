@@ -26,7 +26,7 @@ while variable > 0 and variable <= 5: # Bucle con condiición, limita lo que pue
         LimInferior = float(input("Ingrese el límite inferior (en Ω) para las resistencias a calcular: ")) # Límite inferior dado por el usuario, como es establecido en el documento
         Rtotal = (1 / ((1/R1) + (1/R2) + (1/R3))) # Procedimiento de la Req
         print("El factor de corrección de esta operación es de disminución de 10%.") 
-        Rtotal =- (0.1*Rtotal) # Factor de corrección, se le resta 0.1*Rtotal, o sea, el 10% de la Rtotal
+        Rtotal =- (0.1*Rtotal) # Factor de corrección, se le resta a Rtotal el valor de 0.1*Rtotal, o sea, el 10% de la Rtotal
         if Rtotal < LimInferior: # Validación de límites
             Rtotal -= 2
             print(f"ADVERTENCIA: La resistencia total se ha tenido que corregir debido a que la resistencia total en serie calculada ha sido de menos de {LimInferior} Ω. El nuevo valor de la resistencia total es: {Rtotal}")
