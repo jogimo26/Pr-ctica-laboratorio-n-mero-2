@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto 4"/>
+        <attribute name="authors" value="fabia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-16 09:57:25 p. m."/>
+        <attribute name="created" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDk6MzE6MTEgcC4gbS47Mjg1NA=="/>
+        <attribute name="edited" value="ZmFiaWE7RkFCSUFOT1NPUklPOzIwMjQtMTAtMTY7MDk6NTc6MjUgcC4gbS47MTsyOTc1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="TemperaturaDeseada" type="Integer" array="False" size=""/>
+            <declare name="Tmax" type="Integer" array="False" size=""/>
+            <declare name="Tmin" type="Integer" array="False" size=""/>
+            <declare name="TemperaturaActual" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <declare name="potencia" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese la temperatura deseada para el horno: &quot;" newline="True"/>
+            <input variable="TemperaturaDeseada"/>
+            <assign variable="Tmax" expression="TemperaturaDeseada+(TemperaturaDeseada*(10/100))"/>
+            <assign variable="Tmin" expression="TemperaturaDeseada-(TemperaturaDeseada*(10/100))"/>
+            <assign variable="TemperaturaActual" expression="Random(300)"/>
+            <output expression="&quot;La temperatura actual del horno es: &quot;&amp;TemperaturaActual" newline="True"/>
+            <for variable="i" start="1" end="TemperaturaDeseada" direction="inc" step="1">
+                <assign variable="potencia" expression="0.1*(TemperaturaDeseada-TemperaturaActual)"/>
+                <output expression="&quot;La potencia de calentamiento es: &quot; &amp;potencia" newline="True"/>
+                <assign variable="TemperaturaActual" expression="TemperaturaActual+potencia"/>
+                <output expression="&quot;La temperatura actual es:&quot; &amp;TemperaturaActual" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
